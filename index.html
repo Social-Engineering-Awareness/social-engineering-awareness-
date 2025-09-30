@@ -3,28 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Social Engineering Awareness - The Human Firewall</title>
+    <title>Social Engineering Awareness - High Alert</title>
     <script src="https://cdn.tailwindcss.com"></script>
     
+    <!-- Google Fonts for High-Contrast Theme -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+
     <!-- Font Awesome CDN for professional icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLMDJ8g/zYdY9p2tO1K/YJmE6s0R/Y5c0U1Q+YI7p0H+I7m0L0JzM..." crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <style>
-        /* New Gritty/High-Contrast Theme */
+        /* Enable smooth scrolling across the document for anchor links */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* CRITICAL ALERT THEME: NEAR-BLACK & NEON RED */
         body {
-            /* Using a slightly darker, less perfect background */
-            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-            background-color: #0f172a; /* slate-900 */
+            font-family: 'Inter', sans-serif; /* Clean, modern font for body */
+            background-color: #050505; /* Deep, near-black background */
         }
         
-        /* Custom Shadow for a less 'perfect' look */
+        /* Font for Headings */
+        .header-font {
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        /* Custom Red Neon Glow Effect */
         .card-shadow {
-            box-shadow: 6px 6px 0px 0px rgba(20, 184, 166, 0.5); /* Teal shadow */
+            box-shadow: 0 0 10px rgba(239, 68, 68, 0.4); 
+            border: 1px solid rgba(239, 68, 68, 0.5); /* Subtle red border */
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
         }
 
         .card-hover:hover {
-            transform: translate(-3px, -3px);
-            box-shadow: 9px 9px 0px 0px rgba(20, 184, 166, 0.7);
+            /* Intense glow on hover */
+            transform: scale(1.01);
+            box-shadow: 0 0 25px rgba(255, 51, 51, 0.8), 0 0 5px rgba(255, 255, 255, 0.1);
         }
 
         /* Subtle offset for the main title/hero section contrast */
@@ -40,7 +58,7 @@
             opacity: 0;
         }
         .detail-content.expanded {
-            max-height: 500px; /* Large enough to accommodate content */
+            max-height: 500px; 
             opacity: 1;
             padding-top: 1rem;
         }
@@ -56,45 +74,45 @@
 <body class="text-slate-200 antialiased">
 
     <!-- Header & Navigation -->
-    <header class="bg-gray-900 shadow-2xl sticky top-0 z-50 border-b border-teal-500">
+    <header class="bg-black shadow-2xl sticky top-0 z-50 border-b border-red-500">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <h1 class="text-2xl font-extrabold text-teal-400 tracking-wider">
-                HUMAN FIREWALL
+            <h1 class="text-2xl font-extrabold text-red-400 tracking-wider uppercase header-font">
+                SOCIAL ENGINEERING
             </h1>
             <nav class="hidden md:flex space-x-8 text-slate-300 font-medium">
-                <a href="#definition" class="hover:text-teal-400 transition duration-300">What It Is</a>
-                <a href="#stats" class="hover:text-teal-400 transition duration-300">Facts & Stats</a>
-                <a href="#attacks" class="hover:text-teal-400 transition duration-300">Attack Types</a>
-                <a href="#protect" class="hover:text-teal-400 transition duration-300">Stay Safe</a>
+                <a href="#definition" class="hover:text-red-400 transition duration-300">Definition</a>
+                <a href="#attacks" class="hover:text-red-400 transition duration-300">Tactics</a>
+                <a href="#stats" class="hover:text-red-400 transition duration-300">Data</a>
+                <a href="#protect" class="hover:text-red-400 transition duration-300">Defense</a>
             </nav>
-            <button class="md:hidden p-2 rounded-full text-teal-400 hover:bg-slate-800 transition duration-300" aria-label="Menu">
+            <button class="md:hidden p-2 rounded-full text-red-400 hover:bg-zinc-900 transition duration-300" aria-label="Menu">
                 <i class="fas fa-bars text-xl" aria-hidden="true"></i>
             </button>
         </div>
     </header>
 
     <!-- 1. Hero Section -->
-    <section class="bg-gray-800 text-white pt-24 pb-32 hero-offset">
+    <section class="bg-zinc-950 text-white pt-24 pb-32 hero-offset border-b border-red-900/50">
         <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-            <h2 class="text-sm font-bold uppercase tracking-widest text-teal-400 mb-3">CYBERSECURITY AWARENESS INITIATIVE</h2>
-            <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight text-white">
+            <h2 class="text-sm font-bold uppercase tracking-widest text-red-400 mb-3 header-font">CRITICAL AWARENESS PROTOCOL</h2>
+            <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight text-white header-font">
                 The Human Element is The Key.
             </h1>
-            <p class="text-xl md:text-2xl max-w-3xl mx-auto mb-10 text-slate-300">
-                Social Engineering attacks bypass technology by targeting **you**. Learn the dark art of deception to build an impenetrable defense.
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto mb-10 text-slate-400">
+                Social Engineering attacks bypass technology by targeting <span class="font-bold text-red-400">you</span>. Learn the dark art of deception to build an impenetrable defense.
             </p>
-            <a href="#protect" class="inline-flex items-center justify-center px-10 py-4 border border-transparent text-lg font-bold rounded-lg shadow-xl text-gray-900 bg-teal-400 hover:bg-teal-300 transition duration-300 transform hover:scale-[1.02]">
-                Activate Your Defense 
-                <i class="fas fa-satellite-dish text-xl ml-3" aria-hidden="true"></i>
+            <a href="#protect" class="inline-flex items-center justify-center px-10 py-4 border border-red-500 text-lg font-bold rounded-lg shadow-xl text-white bg-red-600 hover:bg-red-700 transition duration-300 transform hover:scale-[1.05] card-shadow">
+                Protect Yourself NOW
+                <i class="fas fa-shield-alt text-xl ml-3" aria-hidden="true"></i>
             </a>
         </div>
     </section>
 
     <!-- 2. What is Social Engineering? (Definition) -->
-    <section id="definition" class="py-20 -mt-8 bg-slate-900">
+    <section id="definition" class="py-20 -mt-8 bg-black">
         <div class="max-w-5xl mx-auto px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-teal-400 mb-4">
+                <h2 class="text-4xl font-bold text-red-400 mb-4 header-font">
                     The Science of Deception
                 </h2>
                 <p class="text-lg text-slate-400 max-w-2xl mx-auto">
@@ -102,31 +120,31 @@
                 </p>
             </div>
             
-            <div class="bg-slate-800 border-l-4 border-teal-500 p-8 rounded-lg shadow-lg">
+            <div class="bg-zinc-900 border-l-4 border-red-500 p-8 rounded-lg shadow-lg">
                 <div class="flex items-start">
                     <i class="fas fa-bullseye text-3xl text-red-500 mr-4 flex-shrink-0" aria-hidden="true"></i>
                     <div>
-                        <h3 class="text-2xl font-semibold mb-3 text-teal-400">The Core Definition</h3>
+                        <h3 class="text-2xl font-semibold mb-3 text-red-400">The Core Definition</h3>
                         <p class="text-xl leading-relaxed text-slate-300">
-                            Social engineering is the **psychological manipulation** of people into performing actions or divulging confidential information. Cybercriminals use sophisticated lies, emotional triggers (like **fear** or **greed**), and fabricated scenarios (pretexts) to bypass your critical thinking and security procedures.
+                            Social engineering is the <span class="font-bold text-red-400">psychological manipulation</span> of people into performing actions or divulging confidential information. Cybercriminals use sophisticated lies, emotional triggers (like <span class="font-bold text-red-300">fear</span> or <span class="font-bold text-red-300">greed</span>), and fabricated scenarios (pretexts) to bypass your critical thinking and security procedures.
                         </p>
                     </div>
                 </div>
             </div>
 
             <div class="mt-12 grid md:grid-cols-3 gap-8 text-center">
-                <div class="p-6 bg-slate-800 rounded-xl border border-slate-700 card-shadow card-hover transition duration-300">
-                    <i class="fas fa-user-secret text-3xl text-teal-400 mx-auto mb-3" aria-hidden="true"></i>
+                <div class="p-6 bg-zinc-900 rounded-xl border border-red-600/30 card-shadow card-hover">
+                    <i class="fas fa-user-secret text-3xl text-red-400 mx-auto mb-3" aria-hidden="true"></i>
                     <h4 class="font-bold text-lg mb-1 text-white">Human Focus</h4>
                     <p class="text-sm text-slate-400">Targets trust, curiosity, fear, and urgency, making you the primary attack vector.</p>
                 </div>
-                <div class="p-6 bg-slate-800 rounded-xl border border-slate-700 card-shadow card-hover transition duration-300">
-                    <i class="fas fa-hand-sparkles text-3xl text-teal-400 mx-auto mb-3" aria-hidden="true"></i>
+                <div class="p-6 bg-zinc-900 rounded-xl border border-red-600/30 card-shadow card-hover">
+                    <i class="fas fa-hand-sparkles text-3xl text-red-400 mx-auto mb-3" aria-hidden="true"></i>
                     <h4 class="font-bold text-lg mb-1 text-white">Low-Tech Barrier</h4>
                     <p class="text-sm text-slate-400">Relies on convincing dialogue, not complex code exploits or advanced hacking tools.</p>
                 </div>
-                <div class="p-6 bg-slate-800 rounded-xl border border-slate-700 card-shadow card-hover transition duration-300">
-                    <i class="fas fa-lock text-3xl text-teal-400 mx-auto mb-3" aria-hidden="true"></i>
+                <div class="p-6 bg-zinc-900 rounded-xl border border-red-600/30 card-shadow card-hover">
+                    <i class="fas fa-lock text-3xl text-red-400 mx-auto mb-3" aria-hidden="true"></i>
                     <h4 class="font-bold text-lg mb-1 text-white">Bypasses Tech</h4>
                     <p class="text-sm text-slate-400">No firewall can stop a user who willingly gives away their credentials on a fake site.</p>
                 </div>
@@ -134,64 +152,11 @@
         </div>
     </section>
 
-    <!-- 3. Key Facts and Statistics -->
-    <section id="stats" class="py-20 bg-gray-800">
+    <!-- 3. Common Attack Types -->
+    <section id="attacks" class="py-20 bg-zinc-950">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-teal-400 mb-4">
-                    The Ugly Truth: Facts & Figures
-                </h2>
-                <p class="text-lg text-slate-400">
-                    Statistics prove that social engineering is the dominant threat vector globally.
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-4 gap-6">
-                
-                <!-- Stat 1 -->
-                <div class="bg-slate-900 p-6 rounded-xl border border-teal-600 shadow-xl">
-                    <i class="fas fa-percentage text-3xl text-red-500 mb-4" aria-hidden="true"></i>
-                    <p class="text-5xl font-extrabold text-white">90%+</p>
-                    <p class="text-sm text-teal-400 mt-2 font-semibold">
-                        of all successful cyberattacks involve a social engineering component.
-                    </p>
-                </div>
-
-                <!-- Stat 2 -->
-                <div class="bg-slate-900 p-6 rounded-xl border border-teal-600 shadow-xl">
-                    <i class="fas fa-user-times text-3xl text-red-500 mb-4" aria-hidden="true"></i>
-                    <p class="text-5xl font-extrabold text-white">68%</p>
-                    <p class="text-sm text-teal-400 mt-2 font-semibold">
-                        of incidents involve a human error or deliberate deception.
-                    </p>
-                </div>
-                
-                <!-- Stat 3 -->
-                <div class="bg-slate-900 p-6 rounded-xl border border-teal-600 shadow-xl">
-                    <i class="fas fa-money-bill-wave text-3xl text-red-500 mb-4" aria-hidden="true"></i>
-                    <p class="text-5xl font-extrabold text-white">$4.88M</p>
-                    <p class="text-sm text-teal-400 mt-2 font-semibold">
-                        Average cost of a corporate data breach in 2024 (Global average).
-                    </p>
-                </div>
-                
-                <!-- Stat 4 -->
-                <div class="bg-slate-900 p-6 rounded-xl border border-teal-600 shadow-xl">
-                    <i class="fas fa-link text-3xl text-red-500 mb-4" aria-hidden="true"></i>
-                    <p class="text-5xl font-extrabold text-white">1 in 4</p>
-                    <p class="text-sm text-teal-400 mt-2 font-semibold">
-                        Reported cybercrimes that are Phishing/Vishing or Smishing attempts.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 4. Common Attack Types -->
-    <section id="attacks" class="py-20 bg-slate-900">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-teal-400 mb-4">
+                <h2 class="text-4xl font-bold text-red-400 mb-4 header-font">
                     Top 5 Social Engineering Tactics
                 </h2>
                 <p class="text-lg text-slate-400 max-w-3xl mx-auto">
@@ -202,14 +167,13 @@
             <div class="grid md:grid-cols-2 gap-10">
                 
                 <!-- Attack 1: Phishing -->
-                <div id="phishing-card" onclick="toggleDetails('phishing')" class="bg-gray-800 p-8 rounded-xl border border-slate-700 card-shadow card-hover transition duration-300 cursor-pointer">
+                <div id="phishing-card" onclick="toggleDetails('phishing')" class="bg-zinc-900 p-8 rounded-xl border border-red-700/50 card-shadow card-hover cursor-pointer">
                     <div class="flex justify-between items-center mb-4">
                         <div class="flex items-center">
                             <i class="fas fa-envelope-open-text text-2xl text-red-500 mr-3" aria-hidden="true"></i>
                             <h3 class="text-2xl font-bold text-white">1. Phishing (Email)</h3>
                         </div>
-                        <!-- Icon to indicate expandability -->
-                        <i id="phishing-icon" class="fas fa-chevron-right text-lg text-teal-400 card-header-icon" aria-hidden="true"></i>
+                        <i id="phishing-icon" class="fas fa-chevron-right text-lg text-red-400 card-header-icon" aria-hidden="true"></i>
                     </div>
                     <p class="text-slate-300 mb-3">
                         Large-scale attacks via email, mimicking a trusted entity (Microsoft, Amazon, your bank) to trick victims into clicking a malicious link or entering credentials on a clone site.
@@ -218,44 +182,44 @@
                     <span class="inline-block bg-red-800/50 text-red-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Credential Theft</span>
 
                     <!-- Detailed Content - Hidden by default -->
-                    <div id="phishing-details" class="detail-content border-t border-slate-700 mt-4">
+                    <div id="phishing-details" class="detail-content border-t border-zinc-700 mt-4">
                         <p class="text-sm text-slate-400 mt-4 leading-relaxed">
-                            <strong class="text-teal-400">Deep Dive:</strong> Phishing campaigns rely on volume and disguise. They exploit known relationships (e.g., your login to a popular service is expiring) to instill panic. Always check the **sender's actual email address** and **hover over the link** before proceeding. Remember, legitimate institutions rarely ask for passwords via email.
+                            <span class="font-bold text-red-400">Deep Dive:</span> Phishing campaigns rely on volume and disguise. They exploit known relationships (e.g., your login to a popular service is expiring) to instill panic. Always check the <span class="font-bold text-white">sender's actual email address</span> and <span class="font-bold text-white">hover over the link</span> before proceeding. Remember, legitimate institutions rarely ask for passwords via email.
                         </p>
                     </div>
                 </div>
                 
                 <!-- Attack 2: Pretexting -->
-                <div id="pretexting-card" onclick="toggleDetails('pretexting')" class="bg-gray-800 p-8 rounded-xl border border-slate-700 card-shadow card-hover transition duration-300 cursor-pointer">
+                <div id="pretexting-card" onclick="toggleDetails('pretexting')" class="bg-zinc-900 p-8 rounded-xl border border-red-700/50 card-shadow card-hover cursor-pointer">
                     <div class="flex justify-between items-center mb-4">
                         <div class="flex items-center">
                             <i class="fas fa-theater-masks text-2xl text-amber-400 mr-3" aria-hidden="true"></i>
                             <h3 class="text-2xl font-bold text-white">2. Pretexting (Impersonation)</h3>
                         </div>
-                        <i id="pretexting-icon" class="fas fa-chevron-right text-lg text-teal-400 card-header-icon" aria-hidden="true"></i>
+                        <i id="pretexting-icon" class="fas fa-chevron-right text-lg text-red-400 card-header-icon" aria-hidden="true"></i>
                     </div>
                     <p class="text-slate-300 mb-3">
-                        Creating a compelling, detailed, and **fabricated scenario** (the pretext), such as pretending to be a senior executive or an external auditor who "needs access immediately."
+                        Creating a compelling, detailed, and <span class="font-bold text-red-300">fabricated scenario</span> (the pretext), such as pretending to be a senior executive or an external auditor who "needs access immediately."
                     </p>
                     <span class="inline-block bg-amber-800/50 text-amber-300 text-xs font-semibold px-2.5 py-0.5 rounded-full mr-2">Targeted</span>
                     <span class="inline-block bg-amber-800/50 text-amber-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Voice/Chat</span>
 
                     <!-- Detailed Content - Hidden by default -->
-                    <div id="pretexting-details" class="detail-content border-t border-slate-700 mt-4">
+                    <div id="pretexting-details" class="detail-content border-t border-zinc-700 mt-4">
                         <p class="text-sm text-slate-400 mt-4 leading-relaxed">
-                            <strong class="text-teal-400">Deep Dive:</strong> Pretexting is about building trust quickly. The attacker might reference real company names, projects, or employees gathered from social media or public records. The best defense is to always use **multi-step verification** (like calling the person back on their *known* internal extension) before sharing sensitive data or granting access.
+                            <span class="font-bold text-red-400">Deep Dive:</span> Pretexting is about building trust quickly. The attacker might reference real company names, projects, or employees gathered from social media or public records. The best defense is to always use <span class="font-bold text-white">multi-step verification</span> (like calling the person back on their <span class="text-red-300">known</span> internal extension) before sharing sensitive data or granting access.
                         </p>
                     </div>
                 </div>
                 
                 <!-- Attack 3: Baiting -->
-                <div id="baiting-card" onclick="toggleDetails('baiting')" class="bg-gray-800 p-8 rounded-xl border border-slate-700 card-shadow card-hover transition duration-300 cursor-pointer">
+                <div id="baiting-card" onclick="toggleDetails('baiting')" class="bg-zinc-900 p-8 rounded-xl border border-red-700/50 card-shadow card-hover cursor-pointer">
                     <div class="flex justify-between items-center mb-4">
                         <div class="flex items-center">
                             <i class="fas fa-usb text-2xl text-green-500 mr-3" aria-hidden="true"></i>
                             <h3 class="text-2xl font-bold text-white">3. Baiting (Lure)</h3>
                         </div>
-                        <i id="baiting-icon" class="fas fa-chevron-right text-lg text-teal-400 card-header-icon" aria-hidden="true"></i>
+                        <i id="baiting-icon" class="fas fa-chevron-right text-lg text-red-400 card-header-icon" aria-hidden="true"></i>
                     </div>
                     <p class="text-slate-300 mb-3">
                         Luring victims with a promise of something valuable (e.g., a "confidential" USB drive found in the parking lot, free premium content) in exchange for clicking a link or inserting media.
@@ -264,54 +228,54 @@
                     <span class="inline-block bg-green-800/50 text-green-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Physical/Digital</span>
 
                     <!-- Detailed Content - Hidden by default -->
-                    <div id="baiting-details" class="detail-content border-t border-slate-700 mt-4">
+                    <div id="baiting-details" class="detail-content border-t border-zinc-700 mt-4">
                         <p class="text-sm text-slate-400 mt-4 leading-relaxed">
-                            <strong class="text-teal-400">Deep Dive:</strong> Baiting exploits curiosity. In physical attacks, an infected USB stick is dropped where a victim might find it (like a lobby or parking lot). The lure is curiosity over the files it contains. In digital baiting, it's often a "free download" that is actually malware. **Never insert unknown physical media** and be highly skeptical of "free" downloads from non-official sources.
+                            <span class="font-bold text-red-400">Deep Dive:</span> Baiting exploits curiosity. In physical attacks, an infected USB stick is dropped where a victim might find it (like a lobby or parking lot). The lure is curiosity over the files it contains. In digital baiting, it's often a "free download" that is actually malware. <span class="font-bold text-white">Never insert unknown physical media</span> and be highly skeptical of "free" downloads from non-official sources.
                         </p>
                     </div>
                 </div>
                 
                 <!-- Attack 4: Vishing & Smishing -->
-                <div id="vishing-card" onclick="toggleDetails('vishing')" class="bg-gray-800 p-8 rounded-xl border border-slate-700 card-shadow card-hover transition duration-300 cursor-pointer">
+                <div id="vishing-card" onclick="toggleDetails('vishing')" class="bg-zinc-900 p-8 rounded-xl border border-red-700/50 card-shadow card-hover cursor-pointer">
                     <div class="flex justify-between items-center mb-4">
                         <div class="flex items-center">
                             <i class="fas fa-mobile-alt text-2xl text-purple-400 mr-3" aria-hidden="true"></i>
                             <h3 class="text-2xl font-bold text-white">4. Vishing & Smishing (Mobile)</h3>
                         </div>
-                        <i id="vishing-icon" class="fas fa-chevron-right text-lg text-teal-400 card-header-icon" aria-hidden="true"></i>
+                        <i id="vishing-icon" class="fas fa-chevron-right text-lg text-red-400 card-header-icon" aria-hidden="true"></i>
                     </div>
                     <p class="text-slate-300 mb-3">
-                        **Vishing** (Voice Phishing) uses phone calls/voicemails, while **Smishing** (SMS Phishing) uses text messages, both leveraging mobile immediacy and the difficulty of inspecting sender details.
+                        <span class="font-bold text-red-300">Vishing</span> (Voice Phishing) uses phone calls/voicemails, while <span class="font-bold text-red-300">Smishing</span> (SMS Phishing) uses text messages, both leveraging mobile immediacy and the difficulty of inspecting sender details.
                     </p>
                     <span class="inline-block bg-purple-800/50 text-purple-300 text-xs font-semibold px-2.5 py-0.5 rounded-full mr-2">Urgency</span>
                     <span class="inline-block bg-purple-800/50 text-purple-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Mobile Threats</span>
 
                     <!-- Detailed Content - Hidden by default -->
-                    <div id="vishing-details" class="detail-content border-t border-slate-700 mt-4">
+                    <div id="vishing-details" class="detail-content border-t border-zinc-700 mt-4">
                         <p class="text-sm text-slate-400 mt-4 leading-relaxed">
-                            <strong class="text-teal-400">Deep Dive:</strong> These are powerful because they bypass email filters and hit devices we carry everywhere. Vishing often involves an automated call claiming your account has been compromised, pushing you to press '1' and provide banking details. Smishing links are hard to inspect on mobile screens, making them dangerous. If in doubt, **hang up/delete the text** and call the official number printed on your card or website.
+                            <span class="font-bold text-red-400">Deep Dive:</span> These are powerful because they bypass email filters and hit devices we carry everywhere. Vishing often involves an automated call claiming your account has been compromised, pushing you to press '1' and provide banking details. Smishing links are hard to inspect on mobile screens, making them dangerous. If in doubt, <span class="font-bold text-white">hang up/delete the text</span> and call the official number printed on your card or website.
                         </p>
                     </div>
                 </div>
                 
                 <!-- Attack 5: Deepfakes & AI (Wide span) -->
-                <div id="deepfakes-card" onclick="toggleDetails('deepfakes')" class="md:col-span-2 bg-slate-800 p-8 rounded-xl border border-teal-500 shadow-2xl cursor-pointer">
+                <div id="deepfakes-card" onclick="toggleDetails('deepfakes')" class="md:col-span-2 bg-zinc-950 p-8 rounded-xl border border-red-500 shadow-2xl cursor-pointer card-shadow card-hover">
                     <div class="flex justify-between items-center mb-4">
                         <div class="flex items-center">
-                            <i class="fas fa-robot text-2xl text-teal-400 mr-3" aria-hidden="true"></i>
-                            <h3 class="text-2xl font-bold text-teal-400">5. The AI Threat: Hyper-Realistic Deception</h3>
+                            <i class="fas fa-robot text-2xl text-red-400 mr-3" aria-hidden="true"></i>
+                            <h3 class="text-2xl font-bold text-red-400">5. The AI Threat: Hyper-Realistic Deception</h3>
                         </div>
-                        <i id="deepfakes-icon" class="fas fa-chevron-right text-lg text-teal-400 card-header-icon" aria-hidden="true"></i>
+                        <i id="deepfakes-icon" class="fas fa-chevron-right text-lg text-red-400 card-header-icon" aria-hidden="true"></i>
                     </div>
                     <p class="text-slate-300">
-                        AI now powers better grammar, personalized emails, and highly convincing **deepfake audio and video** of executives (e.g., the $\$25M$ fraud scam). **Protocol over Perception:** Always rely on pre-approved communication channels and verification steps for critical requests.
+                        AI now powers better grammar, personalized emails, and highly convincing <span class="font-bold text-red-300">deepfake audio and video</span> of executives (e.g., the $\$25M$ fraud scam). <span class="font-bold text-white">Protocol over Perception:</span> Always rely on pre-approved communication channels and verification steps for critical requests.
                     </p>
-                    <span class="inline-block bg-teal-800/50 text-teal-300 text-xs font-semibold px-2.5 py-0.5 rounded-full mt-3">Next-Gen Risk</span>
+                    <span class="inline-block bg-red-800/50 text-red-300 text-xs font-semibold px-2.5 py-0.5 rounded-full mt-3">Next-Gen Risk</span>
 
                     <!-- Detailed Content - Hidden by default -->
-                    <div id="deepfakes-details" class="detail-content border-t border-slate-700 mt-4">
+                    <div id="deepfakes-details" class="detail-content border-t border-zinc-700 mt-4">
                         <p class="text-sm text-slate-400 mt-4 leading-relaxed">
-                            <strong class="text-teal-400">Deep Dive:</strong> AI is rapidly increasing the quality and scale of attacks. Generative AI makes perfect-sounding voice calls or perfectly written emails, eliminating common red flags like typos or bad grammar. The critical defense here is the **confirmation policy**. If a senior leader requests a large transfer or sensitive data via an unusual method (even if it sounds/looks like them), a mandatory secondary check (in-person, dedicated phone line) must be executed. **Never proceed based on perception alone.**
+                            <span class="font-bold text-red-400">Deep Dive:</span> AI is rapidly increasing the quality and scale of attacks. Generative AI makes perfect-sounding voice calls or perfectly written emails, eliminating common red flags like typos or bad grammar. The critical defense here is the <span class="font-bold text-white">confirmation policy</span>. If a senior leader requests a large transfer or sensitive data via an unusual method (even if it sounds/looks like them), a mandatory secondary check (in-person, dedicated phone line) must be executed. <span class="font-bold text-white">Never proceed based on perception alone.</span>
                         </p>
                     </div>
                 </div>
@@ -319,11 +283,64 @@
         </div>
     </section>
 
-    <!-- 5. How to Protect Yourself (Call to Action) -->
-    <section id="protect" class="py-20 bg-gray-800 border-t border-slate-700">
+    <!-- 4. Key Facts and Statistics -->
+    <section id="stats" class="py-20 bg-black">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-teal-400 mb-4">
+                <h2 class="text-4xl font-bold text-red-400 mb-4 header-font">
+                    The Ugly Truth: Facts & Figures
+                </h2>
+                <p class="text-lg text-slate-400">
+                    Statistics prove that social engineering is the dominant threat vector globally.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-6">
+                
+                <!-- Stat 1 -->
+                <div class="bg-zinc-900 p-6 rounded-xl border border-red-600 shadow-xl card-shadow">
+                    <i class="fas fa-percentage text-3xl text-red-500 mb-4" aria-hidden="true"></i>
+                    <p class="text-5xl font-extrabold text-white">90%+</p>
+                    <p class="text-sm text-red-400 mt-2 font-semibold">
+                        of all successful cyberattacks involve a social engineering component.
+                    </p>
+                </div>
+
+                <!-- Stat 2 -->
+                <div class="bg-zinc-900 p-6 rounded-xl border border-red-600 shadow-xl card-shadow">
+                    <i class="fas fa-user-times text-3xl text-red-500 mb-4" aria-hidden="true"></i>
+                    <p class="text-5xl font-extrabold text-white">68%</p>
+                    <p class="text-sm text-red-400 mt-2 font-semibold">
+                        of incidents involve a human error or deliberate deception.
+                    </p>
+                </div>
+                
+                <!-- Stat 3 -->
+                <div class="bg-zinc-900 p-6 rounded-xl border border-red-600 shadow-xl card-shadow">
+                    <i class="fas fa-money-bill-wave text-3xl text-red-500 mb-4" aria-hidden="true"></i>
+                    <p class="text-5xl font-extrabold text-white">$4.88M</p>
+                    <p class="text-sm text-red-400 mt-2 font-semibold">
+                        Average cost of a corporate data breach in 2024 (Global average).
+                    </p>
+                </div>
+                
+                <!-- Stat 4 -->
+                <div class="bg-zinc-900 p-6 rounded-xl border border-red-600 shadow-xl card-shadow">
+                    <i class="fas fa-link text-3xl text-red-500 mb-4" aria-hidden="true"></i>
+                    <p class="text-5xl font-extrabold text-white">1 in 4</p>
+                    <p class="text-sm text-red-400 mt-2 font-semibold">
+                        Reported cybercrimes that are Phishing/Vishing or Smishing attempts.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. How to Protect Yourself (Call to Action) -->
+    <section id="protect" class="py-20 bg-zinc-950 border-t border-red-900/50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-red-400 mb-4 header-font">
                     Your Personal Defense Strategy
                 </h2>
                 <p class="text-lg text-slate-400 max-w-3xl mx-auto">
@@ -334,56 +351,56 @@
             <div class="grid md:grid-cols-3 gap-10">
                 
                 <!-- Tip 1: Slow Down -->
-                <div class="p-6 bg-slate-900 rounded-xl border border-teal-600 card-shadow card-hover transition duration-300">
+                <div class="p-6 bg-zinc-900 rounded-xl border border-red-600/30 card-shadow card-hover">
                     <i class="fas fa-pause text-3xl text-yellow-400 mb-3" aria-hidden="true"></i>
                     <h4 class="text-xl font-bold mb-2 text-white">1. Pause & Verify</h4>
                     <p class="text-slate-400">
-                        If a message induces **panic or urgency**, that's a red flag. Take five minutes. Contact the sender via a previously known, official channel (not by replying to the suspicious email) to confirm the request is real.
+                        If a message induces <span class="font-bold text-red-300">panic or urgency</span>, that's a red flag. Take five minutes. Contact the sender via a previously known, official channel (not by replying to the suspicious email) to confirm the request is real.
                     </p>
                 </div>
 
                 <!-- Tip 2: Hover and Check -->
-                <div class="p-6 bg-slate-900 rounded-xl border border-teal-600 card-shadow card-hover transition duration-300">
+                <div class="p-6 bg-zinc-900 rounded-xl border border-red-600/30 card-shadow card-hover">
                     <i class="fas fa-search-dollar text-3xl text-yellow-400 mb-3" aria-hidden="true"></i>
                     <h4 class="text-xl font-bold mb-2 text-white">2. Check Every Link</h4>
                     <p class="text-slate-400">
-                        Hover your cursor (or press and hold on mobile) over links. If the URL displayed in the corner doesn't match the expected domain name, **DO NOT CLICK**. Look for subtle misspellings (e.g., `o0` instead of `oo`).
+                        Hover your cursor (or press and hold on mobile) over links. If the URL displayed in the corner doesn't match the expected domain name, <span class="font-bold text-red-300">DO NOT CLICK</span>. Look for subtle misspellings (e.g., `o0` instead of `oo`).
                     </p>
                 </div>
                 
                 <!-- Tip 3: MFA is Mandatory -->
-                <div class="p-6 bg-slate-900 rounded-xl border border-teal-600 card-shadow card-hover transition duration-300">
+                <div class="p-6 bg-zinc-900 rounded-xl border border-red-600/30 card-shadow card-hover">
                     <i class="fas fa-user-lock text-3xl text-yellow-400 mb-3" aria-hidden="true"></i>
                     <h4 class="text-xl font-bold mb-2 text-white">3. Enable MFA Everywhere</h4>
                     <p class="text-slate-400">
-                        Multi-Factor Authentication is your single strongest defense. Even if a bad actor steals your password via a phishing site, they cannot log in without the code from your device. **MFA is non-negotiable.**
+                        <span class="font-bold text-white">Multi-Factor Authentication</span> is your single strongest defense. Even if a bad actor steals your password via a phishing site, they cannot log in without the code from your device. <span class="font-bold text-red-300">MFA is non-negotiable.</span>
                     </p>
                 </div>
 
                 <!-- Tip 4: Watch Your Digital Footprint -->
-                <div class="p-6 bg-slate-900 rounded-xl border border-teal-600 card-shadow card-hover transition duration-300">
+                <div class="p-6 bg-zinc-900 rounded-xl border border-red-600/30 card-shadow card-hover">
                     <i class="fas fa-cloud-sun text-3xl text-yellow-400 mb-3" aria-hidden="true"></i>
                     <h4 class="text-xl font-bold mb-2 text-white">4. Restrict Public Data</h4>
                     <p class="text-slate-400">
-                        Attackers gather seemingly innocent details from social media (your pet's name, where you went to high school, vacation dates) to make their pretexts sound more authentic. Limit public sharing.
+                        Attackers gather seemingly innocent details from social media (your pet's name, where you went to high school, vacation dates) to make their pretexts sound more authentic. <span class="font-bold text-white">Limit public sharing.</span>
                     </p>
                 </div>
                 
                 <!-- Tip 5: Be Polite, But Skeptical -->
-                <div class="p-6 bg-slate-900 rounded-xl border border-teal-600 card-shadow card-hover transition duration-300">
+                <div class="p-6 bg-zinc-900 rounded-xl border border-red-600/30 card-shadow card-hover">
                     <i class="fas fa-handshake-slash text-3xl text-yellow-400 mb-3" aria-hidden="true"></i>
                     <h4 class="text-xl font-bold mb-2 text-white">5. Challenge Outsiders</h4>
                     <p class="text-slate-400">
-                        If someone attempts to gain physical access (Tailgating), politely but firmly ask for their credentials and offer to walk them to reception. Security procedures always trump social courtesy.
+                        If someone attempts to gain physical access (Tailgating), politely but firmly ask for their credentials and offer to walk them to reception. <span class="font-bold text-white">Security procedures always trump social courtesy.</span>
                     </p>
                 </div>
                 
                 <!-- Tip 6: Keep Your Tech Updated -->
-                <div class="p-6 bg-slate-900 rounded-xl border border-teal-600 card-shadow card-hover transition duration-300">
+                <div class="p-6 bg-zinc-900 rounded-xl border border-red-600/30 card-shadow card-hover">
                     <i class="fas fa-screwdriver text-3xl text-yellow-400 mb-3" aria-hidden="true"></i>
                     <h4 class="text-xl font-bold mb-2 text-white">6. Patch Immediately</h4>
                     <p class="text-slate-400">
-                        Often, social engineering leads to malware delivery. Keep your operating system and applications fully updated to ensure that technical exploits cannot succeed, even if you are momentarily tricked.
+                        Often, social engineering leads to malware delivery. Keep your operating system and applications fully updated to ensure that technical exploits cannot succeed, even if you are <span class="font-bold text-red-300">momentarily tricked</span>.
                     </p>
                 </div>
             </div>
@@ -391,9 +408,10 @@
     </section>
     
     <!-- Footer -->
-    <footer class="bg-gray-900 py-10 border-t border-teal-500/50">
+    <footer class="bg-black py-10 border-t border-red-500/50">
         <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center text-slate-500 text-sm">
-            <p>&copy; 2025 Human Firewall Awareness Initiative. | Vigilance is Key.</p>
+            <!-- Updated footer text -->
+            <p>&copy; 2025 Made for insa summer camp. | <span class="text-red-400">Vigilance is Key.</span></p>
             <p class="mt-2">Protect the perimeter: yourself.</p>
         </div>
     </footer>
@@ -413,9 +431,11 @@
 
                 // Collapse all other cards for a cleaner single-accordion view
                 document.querySelectorAll('.detail-content.expanded').forEach(el => {
-                    el.classList.remove('expanded');
-                    el.parentElement.querySelector('.card-header-icon').classList.remove('expanded');
-                    el.parentElement.setAttribute('aria-expanded', 'false');
+                    if (el.id !== detailElement.id) {
+                        el.classList.remove('expanded');
+                        el.parentElement.querySelector('.card-header-icon').classList.remove('expanded');
+                        el.parentElement.setAttribute('aria-expanded', 'false');
+                    }
                 });
                 
                 // Toggle visibility and rotation for the current card
@@ -423,6 +443,10 @@
                     detailElement.classList.add('expanded');
                     iconElement.classList.add('expanded');
                     cardElement.setAttribute('aria-expanded', 'true');
+                } else {
+                    detailElement.classList.remove('expanded');
+                    iconElement.classList.remove('expanded');
+                    cardElement.setAttribute('aria-expanded', 'false');
                 }
             }
         }
